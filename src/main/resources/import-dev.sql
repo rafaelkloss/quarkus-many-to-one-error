@@ -1,0 +1,8 @@
+-- inserir idiomas pradrão
+INSERT INTO idioma(id, ativo, iso, nome, original) VALUES (1, true, 'PT-br', 'Português Brasileiro', 'Português Brasileiro');
+INSERT INTO cliente(tipo, id, complemento, "enderecoPadraoGoogle", "dataAtualizacao", "dataCriacao", nome, status, logo, site, slug, "idIdiomaDefault", "timeZone", sandbox, "firebaseUser", "firebasePassword", "dominioEmail")VALUES ('MATRIZ', 2, '8º Andar', 'R. Eduardo Sprada, 4390 - Campo Comprido, Curitiba - PR, 81270-010', now()::timestamp, now()::timestamp, 'Acme Inc.', 'ATIVO', '', 'http://www.acme.inc', 'dev-acme', 1, 'AMERICA_SAO_PAULO', true, 'acme@aaa.pro', 'dfsdafdsff', '@acme.com');
+INSERT INTO usuario(id, email, "dataCriacao", nick, nome, senha, "idCliente", "idUsuarioAtualizacao", "idIdiomaDefault", "senhasIncorretas", "isGestor", "fotoPerfil", "timeZone") VALUES (2, 'rafael.kloss@acme.com', now()::timestamp, 'teste 1', 'testes 1 a', 'asdfasdf', 2, null, 1, 0, true, 'sx', 'AMERICA_SAO_PAULO');
+UPDATE cliente set "idResponsavel" = 2 where id = 2; 
+INSERT INTO usuario(id, email, "dataCriacao", nick, nome, senha,  "idCliente", "idUsuarioAtualizacao", "idIdiomaDefault", "senhasIncorretas", "isGestor", "fotoPerfil", "timeZone") VALUES (3, 'bernardo.salgado@acme.com', now()::timestamp, 'teste2', 'teste 2 a', 'asdfasdfadsf', 2, null, 1, 0, true, null, 'AMERICA_SAO_PAULO');
+INSERT INTO public.cargo(id, ativo, descricao, isgestao, "dataAtualizacao", "dataCriacao", nome, "idCliente", "idUsuarioAtualizacao", "idUsuarioCriacao")VALUES (1, true, 'cargo teste', true, now()::timestamp, now()::timestamp, 'cargo ccc', 2, 2, 2);
+update usuario set "idCargo" = 1;
