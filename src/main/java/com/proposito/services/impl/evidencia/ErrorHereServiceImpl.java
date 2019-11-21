@@ -6,6 +6,7 @@ import javax.enterprise.context.RequestScoped;
 import org.apache.commons.codec.digest.DigestUtils;
 
 import com.proposito.dto.evidencia.feedback.SolicitacaoFeedbackInternoDTO;
+import com.proposito.model.cliente.Matriz;
 import com.proposito.model.core.evidencia.feedback.InternalRequest;
 import com.proposito.model.usuario.Usuario;
 import com.proposito.services.contract.evidencia.ErrorHereService;
@@ -20,7 +21,9 @@ public class ErrorHereServiceImpl extends EvidenciaServiceImpl implements ErrorH
 	public String errorRequestHere(SolicitacaoFeedbackInternoDTO solicitacaoDTO) {
 		// fake logged user
 		final Usuario usuario = (Usuario) evidenciaDAO.getById(Usuario.class, 2);
-
+		Matriz company;
+		final Matriz matriz = usuario.getMatriz();
+		company = matriz;
 		final InternalRequest solicitacao = new InternalRequest();
 		solicitacao.setDescricao(solicitacaoDTO.getDescricao());
 		solicitacao.setSolicitante(usuario);
