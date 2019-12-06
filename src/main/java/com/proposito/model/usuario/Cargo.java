@@ -1,6 +1,5 @@
 package com.proposito.model.usuario;
 
-import javax.persistence.Cacheable;
 import javax.persistence.Column;
 import javax.persistence.Embedded;
 import javax.persistence.Entity;
@@ -22,7 +21,6 @@ import com.proposito.model.util.LogRegistro;
 @Entity
 @Table(name = "cargo", uniqueConstraints = @UniqueConstraint(name = "cargo_nome_unique", columnNames = { "`idCliente`",
 		"nome" }))
-@Cacheable
 public class Cargo extends AbstractModel implements HasLogAndCliente, HasToggleAtivo {
 
 	@Id

@@ -3,7 +3,6 @@ package com.proposito.model.usuario;
 import java.time.LocalDate;
 import java.time.OffsetDateTime;
 
-import javax.persistence.Cacheable;
 import javax.persistence.Column;
 import javax.persistence.Embedded;
 import javax.persistence.Entity;
@@ -35,7 +34,6 @@ import com.proposito.model.util.LogRegistro;
  * @author kloss
  */
 @Entity
-@Cacheable
 @Table(name = "usuario")
 public class Usuario extends AbstractModel {
 

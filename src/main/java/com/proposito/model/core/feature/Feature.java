@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public enum Feature {
-	Teste("Gestão por Competências", null, false, false, false, false);
+	Teste("teste", null, false, false, false, false);
 
 	private final String descricao;
 
