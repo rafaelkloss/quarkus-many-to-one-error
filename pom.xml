@@ -195,7 +195,7 @@
                   <POSTGRES_DB>quarkus_test</POSTGRES_DB>
                 </env>
                 <ports>
-                  <port>5432:5432</port>
+                  <port>5437:5437</port>
                 </ports>
                 <log>
                   <prefix>PostgreSQL:</prefix>
@@ -206,7 +206,7 @@
                   <tcp>
                     <mode>mapped</mode>
                     <ports>
-                      <port>5432</port>
+                      <port>5437</port>
                     </ports>
                   </tcp>
                   <time>10000</time>
